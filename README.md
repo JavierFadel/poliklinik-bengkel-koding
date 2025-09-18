@@ -2,43 +2,43 @@
 
 A comprehensive clinic management system built with Laravel 11, designed to streamline healthcare operations and patient management with modern web technologies.
 
-## 🏥 Project Overview
+## Project Overview
 
 **Poliklinik Bengkel Koding** is a full-featured web-based clinic management system that digitizes and automates healthcare facility operations. Built with Laravel 11 and modern frontend technologies, it provides a complete solution for managing patients, doctors, medical appointments, examinations, prescriptions, and multi-clinic administration.
 
 ### Core Features
 
-#### 🧑‍⚕️ Multi-Role User Management
+#### Multi-Role User Management
 - **Admin Panel**: Complete system administration with user management
 - **Doctor Dashboard**: Medical professional interface with patient management
 - **Patient Portal**: Self-service registration and appointment booking
 - **Role-Based Access Control**: Secure permission system (Status: 1=Admin, 2=Doctor, 3=Patient)
 
-#### 📋 Patient Management System
+#### Patient Management System
 - **Digital Patient Records**: Complete patient registration with auto-generated medical record numbers
 - **Patient Information**: Contact details, address, national ID (KTP), and phone numbers
 - **Medical History**: Comprehensive examination and treatment history tracking
 - **Doctor-Patient Relationships**: Filtered patient views based on doctor assignments
 
-#### 🩺 Doctor & Staff Management
+#### Doctor & Staff Management
 - **Doctor Profiles**: Professional information with clinic specialization assignments
 - **Schedule Management**: Flexible scheduling system with day-wise availability
 - **Patient Queue**: Real-time patient queue management for each doctor
 - **Clinic Assignments**: Multi-clinic support with specialized departments
 
-#### 📅 Advanced Appointment System
+#### Advanced Appointment System
 - **Smart Scheduling**: Queue-based appointment system preventing conflicts
 - **Auto Queue Numbers**: Automatic queue number generation for fair patient handling
 - **Schedule Integration**: Appointments linked to doctor availability schedules
 - **Complaint Tracking**: Initial patient complaints recorded during registration
 
-#### 🔍 Medical Examination Records
+#### Medical Examination Records
 - **Digital Examinations**: Comprehensive examination forms with diagnosis tracking
 - **Treatment Notes**: Detailed medical notes and observations
 - **Cost Calculation**: Automated billing and examination fee calculation
 - **Date/Time Tracking**: Precise examination timing and scheduling
 
-#### 💊 Medication & Prescription Management
+#### Medication & Prescription Management
 - **Drug Database**: Complete medication inventory with pricing and packaging info
 - **Prescription System**: Digital prescription creation linked to examinations
 - **Multi-Drug Prescriptions**: Support for multiple medications per examination
@@ -53,7 +53,7 @@ A comprehensive clinic management system built with Laravel 11, designed to stre
 - ✅ **Data Security** - Secure, encrypted patient data with role-based access
 - ✅ **Scalability** - Multi-clinic support for healthcare facility expansion
 
-## 🛠 Technical Architecture
+## Technical Architecture
 
 ### Backend Framework
 ```
@@ -91,7 +91,7 @@ Modern Frontend Stack
 - **Input Validation**: Comprehensive server-side validation
 - **Password Security**: Bcrypt hashing with secure defaults
 
-## 📊 Database Architecture
+## Database Architecture
 
 The system is built around 8 core entities with sophisticated relationships and data integrity:
 
@@ -204,7 +204,7 @@ Doctor Examination → Prescription Creation → Cost Calculation →
 Medical History Update
 ```
 
-## 🔗 Advanced Routing & Middleware
+## Advanced Routing & Middleware
 
 ### Route Structure
 ```php
@@ -260,7 +260,7 @@ class RoleAccess
 }
 ```
 
-## 🎯 Key Controller Features
+## Key Controller Features
 
 ### Smart Data Relationships
 ```php
@@ -298,7 +298,7 @@ public function store(Request $request)
 }
 ```
 
-## 🚀 Installation & Development Setup
+## Installation & Development Setup
 
 ### System Requirements
 ```bash
@@ -347,7 +347,7 @@ php artisan route:cache
 php artisan view:cache
 ```
 
-## 📁 Project Architecture
+## Project Architecture
 
 ### MVC Architecture Overview
 ```
@@ -386,7 +386,7 @@ database/
 └── seeders/                 # Sample data generators
 ```
 
-## 🎛 Feature Modules
+## Feature Modules
 
 ### 1. User Management System
 - **Multi-role Authentication**: Admin, Doctor, Patient roles
@@ -428,7 +428,7 @@ database/
 - **User Management**: Admin control over all system users
 - **Data Analytics**: Operational insights and reporting
 
-## 🔐 Security Implementation
+## Security Implementation
 
 ### Authentication Flow
 ```
@@ -450,7 +450,7 @@ Role Assignment → Permission Verification → Access Control
 - **Audit Trails**: Comprehensive logging system
 - **Session Management**: Secure session handling and timeout
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 ### Test Coverage
 ```bash
@@ -470,7 +470,7 @@ php artisan test --filter=PatientManagement
 - **Automated Testing**: PHPUnit integration
 - **Code Documentation**: Comprehensive inline documentation
 
-## 📈 Performance & Optimization
+## Performance & Optimization
 
 ### Database Optimization
 - **Query Optimization**: Eloquent relationship eager loading
@@ -484,7 +484,7 @@ php artisan test --filter=PatientManagement
 - **Image Optimization**: Responsive image handling
 - **Browser Caching**: Static asset caching strategy
 
-## 🌐 API & Integration
+## API & Integration
 
 ### RESTful API Structure
 ```php
@@ -506,7 +506,7 @@ GET    /api/queue/{clinic}     # Get queue status
 - **Bearer Tokens**: Secure API access tokens
 - **Rate Limiting**: API request throttling
 
-## 🚀 Deployment & DevOps
+## Deployment & DevOps
 
 ### Environment Configuration
 ```env
@@ -540,55 +540,3 @@ MAIL_PASSWORD=your_password
 - [ ] Monitoring and logging configured
 - [ ] Performance optimization applied
 - [ ] Security hardening completed
-
-## 🤝 Contributing
-
-### Development Workflow
-1. **Fork the Repository**
-2. **Create Feature Branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit Changes** (`git commit -m 'Add amazing feature'`)
-4. **Push to Branch** (`git push origin feature/amazing-feature`)
-5. **Open Pull Request**
-
-### Code Standards
-- **PSR-12** coding standard compliance
-- **Laravel conventions** and best practices
-- **Comprehensive testing** for new features
-- **Documentation updates** for significant changes
-
-### Development Commands
-```bash
-# Code style fixing
-./vendor/bin/pint
-
-# Run tests
-php artisan test
-
-# Generate documentation
-php artisan ide-helper:generate
-```
-
-## 📞 Support & Documentation
-
-### Getting Help
-- **GitHub Issues**: Report bugs and request features
-- **Documentation**: Comprehensive inline code documentation
-- **Laravel Community**: Laravel.com community resources
-
-### System Requirements
-- **Minimum**: PHP 8.2, 2GB RAM, 1GB storage
-- **Recommended**: PHP 8.3+, 4GB RAM, 5GB storage
-- **Production**: Load balancer, Redis cache, SSL certificate
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## 🙏 Acknowledgments
-
-- **Laravel Framework** - Robust PHP framework
-- **Tailwind CSS** - Utility-first CSS framework  
-- **Livewire** - Dynamic interfaces without complexity
-- **Jetstream** - Application scaffolding and authentication
