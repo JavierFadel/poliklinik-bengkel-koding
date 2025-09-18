@@ -128,9 +128,14 @@ class PeriksaController extends Controller
 
         $nextDate = Carbon::now()->next($day);        
 
+        // echo json_encode($request->jam_periksa); die;
+
         // Combine the date with the time
         $dateTime = $nextDate->format('Y-m-d') . ' ' . $request->jam_periksa;
 
+        // echo json_encode($dateTime); die;
+
+        // FIXME: masalah
         $finalDate = Carbon::createFromFormat('Y-m-d H:i', $dateTime);
 
         $obat = Obat::where('id', $request->id_obat)->first();
